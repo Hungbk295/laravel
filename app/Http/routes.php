@@ -54,9 +54,7 @@ echo "Đây là trang quan lý thành viên";
 });
 
 
-Route::get("goi-master",function(){
-	return view("views.layout");
-});
+
 Route::get('schema/create',function(){
 	Schema::create('khoapham',function($table){
 		$table ->increments('id');
@@ -173,6 +171,12 @@ Route::get('check-view',function(){
 	} else{
 		return 'Khong ton tai View';
 	}
+});
+Route::get('login',function(){
+	return view('view');
+});
+Route::get("goi-master",function(){
+	return view("views.layout");
 });
 Route::get('login',function(){
 	return view('view');
